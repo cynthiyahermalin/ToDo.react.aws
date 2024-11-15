@@ -3,6 +3,7 @@ import axios from 'axios'; // Import axios
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import './App.css';
+import { API_URL } from './utils';
 const App = () => {
     const [tasks, setTasks] = useState([]);
     // Replace '<your-api-id>', '<region>', and '<stage>' with your actual values
@@ -11,7 +12,7 @@ const App = () => {
 
     const fetchTasks = async ()=>{
         try {
-            const response = await axios.get('https://l9trhjlgof.execute-api.ap-south-1.amazonaws.com/production/task'); // Replace with your API URL
+            const response = await axios.get('API_URL'); // Replace with your API URL
             
             if (response.status === 200 ) {
                 setTasks(response.data);
@@ -39,7 +40,7 @@ const App = () => {
                     taskName,
                     completed:false 
             };
-            const response = await axios.post('https://l9trhjlgof.execute-api.ap-south-1.amazonaws.com/production/task',newTask); // Replace with your API URL
+            const response = await axios.post('API_URL',newTask); // Replace with your API URL
             
             if (response.status === 201 || response.status === 200) {
                 fetchTasks(); 
@@ -58,7 +59,7 @@ const App = () => {
     // Function to delete a task
     const deleteTask = async (index,taskId) => {
         try {
-            await axios.delete(`https://l9trhjlgof.execute-api.ap-south-1.amazonaws.com/production/task/${taskId}` ); // Replace with your API URL
+            await axios.delete(`API_URL${taskId}` ); // Replace with your API URL
             fetchTasks(); 
         } catch (error) {
             console.error('Error deleting task:', error);
@@ -71,7 +72,7 @@ const App = () => {
         const task = tasks.find(task => task.taskId === taskId);
         if (task) {
             try {
-                await axios.put(`https://l9trhjlgof.execute-api.ap-south-1.amazonaws.com/production/task/${taskId}`,
+                await axios.put(`API_URL${taskId}`,
                     {
                         taskID: taskId,
                         completed: !task.completed
