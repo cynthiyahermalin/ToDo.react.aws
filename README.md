@@ -1,6 +1,6 @@
 # To-Do Task Manager
 ## Description
-A web application to manage tasks efficiently using a React-based frontend and AWS services for the backend, including Lambda functions, DynamoDB, IAM roles, and API Gateway for API connectivity.
+###### A web application to manage tasks efficiently using a React-based frontend and AWS services for the backend, including Lambda functions, DynamoDB, IAM roles, and API Gateway for API connectivity.
 ---
 ## Installation
 ### Frontend Setup (React)
@@ -15,24 +15,25 @@ A web application to manage tasks efficiently using a React-based frontend and A
 5. Access the application at (http://localhost:PORT).
 ---
 ## Usage
-The To-Do Task Manager allows users to create, view, update, and delete tasks using a clean and intuitive user interface. The frontend is built using React, with ==TaskForm== and ==TaskList== components handling task creation and display respectively.The ==App.css== file is used to style the frontend components of your To-Do Task Manager project, enhancing the user interface for a better visual experience.
+###### The To-Do Task Manager allows users to create, view, update, and delete tasks using a clean and intuitive user interface. The frontend is built using React, with `TaskForm` and `TaskList` components handling task creation and display respectively.The `App.css=` file is used to style the frontend components of your To-Do Task Manager project, enhancing the user interface for a better visual experience.
 ---
 ## Features
--**Task Management**: Add, edit, mark complete, and delete tasks.
--**API Integration**: Seamlessly integrates with a serverless backend using AWS Lambda and API Gateway.
--**Persistent Data Storage**: Utilizes DynamoDB for task storage.
+- **Task Management**: Add, edit, mark complete, and delete tasks.
+- **API Integration**: Seamlessly integrates with a serverless backend using AWS Lambda and API Gateway.
+- **Persistent Data Storage**: Utilizes DynamoDB for task storage.
 ---
 ## Project Structure
 ### Frontend (React)
-```/src
-  ├── components
-  │   ├── TaskForm.js         # Form for adding tasks
-  │   ├── TaskList.js         # Displays the list of tasks
-  ├── utils
-  │   ├── apiConfig.js        # Contains API URL configuration
-  ├── App.js                  # Main application logic and API connections
-  ├── App.css                 # Styles for the application
-  ├── index.js                # Entry point for React app```
+
+> /src
+   ├── components
+   │    ├── TaskForm.js         # Form for adding tasks
+   │    ├── TaskList.js         # Displays the list of tasks
+   ├── utils
+   │    ├── apiConfig.js        # Contains API URL configuration
+   ├── App.js                   # Main application logic and API connections
+   ├── App.css                  # Styles for the application
+   ├── index.js                 # Entry point for React app```
 
 ---
 ## Configuration
@@ -47,7 +48,7 @@ The To-Do Task Manager allows users to create, view, update, and delete tasks us
 ---
 ## API Integration
 ### Connecting API with Frontend:
-- ==App.js== includes Axios calls with ==async== and ==await== to interact with the API.
+- `App.js` includes Axios calls with `async` and `await` to interact with the API.
 - API URL is configured in the *src/utils/apiConfig.js* file.
 
 ### TaskForm Component:
