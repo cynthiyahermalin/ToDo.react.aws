@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+To-Do Task Manager
+Description
+A web application to manage tasks efficiently using a React-based frontend and AWS services for the backend, including Lambda functions, DynamoDB, IAM roles, and API Gateway for API connectivity.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Installation
+Usage
+Features
+Project Structure
+Configuration
+Backend Architecture
+API Integration
+Contributing
+License
+Installation
+Frontend Setup (React)
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/yourusername/todo-task-manager.git
+Navigate to the project directory:
+bash
+Copy code
+cd todo-task-manager
+Install the dependencies:
+bash
+Copy code
+npm install
+Start the application:
+bash
+Copy code
+npm start
+Access the application at http://localhost:PORT.
+Usage
+The To-Do Task Manager allows users to create, view, update, and delete tasks using a clean and intuitive user interface. The frontend is built using React, with TaskForm and TaskList components handling task creation and display respectively.The App.css file is used to style the frontend components of your To-Do Task Manager project, enhancing the user interface for a better visual experience.
 
-## Available Scripts
+Features
+Task Management: Add, edit, mark complete, and delete tasks.
+API Integration: Seamlessly integrates with a serverless backend using AWS Lambda and API Gateway.
+Persistent Data Storage: Utilizes DynamoDB for task storage.
 
-In the project directory, you can run:
+Project Structure
+Frontend (React)
+bash
+Copy code
+/src
+  ├── components
+  │   ├── TaskForm.js         # Form for adding tasks
+  │   ├── TaskList.js         # Displays the list of tasks
+  ├── utils
+  │   ├── apiConfig.js        # Contains API URL configuration
+  ├── App.js                  # Main application logic and API connections
+  ├── App.css                 # Styles for the application
+  ├── index.js                # Entry point for React app
 
-### `npm start`
+Configuration
+Set up your API URL in the src/utils/apiConfig.js file.
+Ensure AWS services (Lambda, DynamoDB, IAM roles, and API Gateway) are properly configured.
+Backend Architecture
+AWS Lambda: Handles backend logic, such as CRUD operations for tasks.
+DynamoDB: NoSQL database to store task data.
+IAM Roles: Used to manage permissions and secure access.
+API Gateway: Connects the React frontend to the backend Lambda functions.
+API Integration
+Connecting API with Frontend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+App.js includes Axios calls with async and await to interact with the API.
+API URL is configured in the src/utils/apiConfig.js file.
+TaskForm Component:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Handles task creation via user input.
+Submits data to the backend using an API call.
+TaskList Component:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Displays all tasks retrieved from the backend.
+Allows updates and deletions via corresponding API calls.
+Contributing
+Fork the repository.
+Create your feature branch (git checkout -b feature/new-feature).
+Commit your changes (git commit -m 'Add new feature').
+Push to the branch (git push origin feature/new-feature).
+Open a pull request.
