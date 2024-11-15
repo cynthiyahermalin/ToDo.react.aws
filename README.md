@@ -25,7 +25,8 @@
 ## Project Structure
 ### Frontend (React)
 
-(```/src
+```
+   /src
    ├── components
    │    ├── TaskForm.js         # Form for adding tasks
    │    ├── TaskList.js         # Displays the list of tasks
@@ -33,7 +34,8 @@
    │    ├── apiConfig.js        # Contains API URL configuration
    ├── App.js                   # Main application logic and API connections
    ├── App.css                  # Styles for the application
-   ├── index.js                 # Entry point for React app```)
+   ├── index.js                 # Entry point for React app
+```
 
 ---
 ## Configuration
