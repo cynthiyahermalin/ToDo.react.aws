@@ -1,5 +1,5 @@
 import React ,{useState} from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
+
 import EditIcon from '@mui/icons-material/Edit';
 
 const TaskList = ({ tasks, deleteTask, toggleTask,updateTask }) => {
@@ -40,12 +40,13 @@ const TaskList = ({ tasks, deleteTask, toggleTask,updateTask }) => {
                         {task.taskName}
                     </span>
                     )}
-                    <button onClick={() => deleteTask(index,task.taskId)}><DeleteIcon /></button>
+                    <button className="delete-button"
+                         onClick={() => deleteTask(index,task.taskId)}>Delete</button>
 
                      {isEditing === task.taskId ? (
                         <button onClick={() => handleSaveClick(task.taskId)}>Save</button>
                     ) : (
-                    <button onClick={() => handleEditClick(task)}><EditIcon/></button>
+                    <button className="edit-box" onClick={() => handleEditClick(task)}><EditIcon/></button>
                 )}
 
                 </li>

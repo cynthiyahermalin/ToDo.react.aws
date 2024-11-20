@@ -23,7 +23,8 @@ const TaskForm = ({ addTask }) => {
                 onChange={handleInputChange}
                 placeholder="Add a new task..."
             />
-            <button onClick={handleAddTask}>Add Task</button>
+            <button className="green-button"
+             onClick={handleAddTask}>Add Task</button>
         </div>
     );
 };

@@ -42,11 +42,52 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-button {
-  margin-left: auto;
-  background-color: rgb(53, 145, 0);
-  color: white;
-  border: none;
-  padding: 5px 10px;
+.green-button {
+  background-color: green; /* Green background color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Add padding for size */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.green-button:hover {
+  background-color: darkgreen; /* Darker green when hovering */
+}
+
+
+.delete-button {
+  background-color: rgba(255, 0, 0, 0.76); /* Red background color */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 8px 20px; /* Add padding for size */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-button:hover {
+  background-color: darkred; /* Darker red when hovering */
+}
+.edit-box {
+  display: inline-flex; /* Makes the box fit around the content */
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  background-color: rgba(255, 0, 0, 0.774); /* Red background */
+  color: white; /* White icon color */
+  width: 40px; /* Width of the box */
+  height: 40px; /* Height of the box */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 18px; /* Adjust icon size */
+  border: none; /* No border */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.edit-box:hover {
+  background-color: darkred; /* Darker red on hover */
 }
 
